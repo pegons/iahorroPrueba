@@ -32,6 +32,8 @@ Se trata de una refactorización a código DDD de un proyecto que contiene un CR
 
 Todo está implementado en una primera instancia en el controlador y usa directamente modelos Eloquent, por lo que ya es una pista de que no sigue arquitectura hexagonal ni buenas prácticas (hay proyectos que no hay por qué usar DDD obligatoriamente, pero en este caso la prueba era el refactor).
 
+He desarrollado todo con metodología TDD, suelo hacerlo mediante el test E2E, apuntando al endpoint y desarrollando y cambiando el test segun necesíto, no me ha hecho falta ni postman usando este paradigma. No he tratado todo el conjunto de test, no ha sido el happyPath únicamente, porque he agregado algunas excepciones, pero siempre se puede controlar mas casos, pero al ser una prueba he considerado que era bastante, ya que ha habido bastante desarrollo.
+
 Lo primero que se ve son las rutas típicas de CRUD, así que la primera idea (a mí me gusta más así) es crear un controlador por cada método que vayamos a usar. Según el principio de Responsabilidad Única, una clase tiene que tener una única función, y en este caso también me gusta aplicárselo a los controladores.
 
 Una vez creado el controlador, lo siguiente es usar la inversión de dependencias, es decir, inyección de interfaces en lugar de clases. Así, el día de mañana, si se quiere cambiar, solo hay que cambiar la clase y que implemente de ella. Además, Laravel es capaz de resolver en tiempo de ejecución la clase que define la interfaz, por lo que podríamos tener varios application services dependiendo de, por ejemplo, el tipo de cliente y resolverse en tiempo de ejecución para diferentes implementaciones de un Use Case.
