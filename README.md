@@ -3,7 +3,7 @@
 
         composer install (Requiere php 8.1)
 
-- Configuracion de la BBDD en el .env
+- Configuracion de la BBDD en el .env (No olvidar crear el .env quitandole el .example)
 
 - Ejecutamos las migraciones y los seeders si se necesita:
 
