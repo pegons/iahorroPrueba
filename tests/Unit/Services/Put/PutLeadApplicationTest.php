@@ -28,7 +28,7 @@ class PutLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_updates_lead_successfully()
+    public function testLeadIsUpdateSuccessFully()
     {
         $uuid = 'some-uuid';
         $updateData = [
@@ -70,7 +70,7 @@ class PutLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_if_update_fails()
+    public function testLeadFailedUpdating()
     {
         $this->expectException(LeadUpdateException::class);
 

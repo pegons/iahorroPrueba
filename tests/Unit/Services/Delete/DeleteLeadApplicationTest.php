@@ -24,7 +24,7 @@ class DeleteLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_deletes_lead_successfully()
+    public function testDeleteSucessful()
     {
         $uuid = 'some-uuid';
         $leadDomain = Mockery::mock(LeadDomain::class);
@@ -45,7 +45,7 @@ class DeleteLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_if_lead_not_found()
+    public function testLeadNotFound()
     {
         $this->expectException(LeadDeleteException::class);
         $this->expectExceptionMessage("Lead not found with ID: some-uuid");
@@ -62,7 +62,7 @@ class DeleteLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_if_delete_fails()
+    public function testThrowFailExceptionTryingDeleting()
     {
         $this->expectException(LeadDeleteException::class);
         $this->expectExceptionMessage("Unable to delete lead");

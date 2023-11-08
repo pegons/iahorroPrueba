@@ -32,7 +32,7 @@ class PostLeadApplicationTest extends TestCase
     }
 
     /** @test */
-        public function it_creates_lead_and_client_successfully()
+        public function testLeadIsCreatedSuccessFully()
     {
         $postData = [
             'name' => 'John Doe',
@@ -83,7 +83,7 @@ class PostLeadApplicationTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_if_lead_creation_fails()
+    public function testCreateLeadFail()
     {
         $this->expectException(NewLeadCreateException::class);
 
