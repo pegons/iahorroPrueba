@@ -1,16 +1,28 @@
 <h1> Puesta en marcha </h1>
-- Inicializamos el proyecto con: 
+- Inicializamos el proyecto con:
+
         composer install (Requiere php 8.1)
+
 - Configuracion de la BBDD en el .env
+
 - Ejecutamos las migraciones y los seeders si se necesita:
+
         php artisan migrate:fresh --seed
+
 - Ahora para no tener que usar postman ni ningun cliente de peticiones, he creado todos los test E2E (Carpeta test/E2E)
+
   Dentro de estos test, estan las llamadas y las comprobaciones de datos que el endpoint funciono correctamente.
+
   Podemos lanzarlo uno por uno con
+
           vendor/bin/phpunit --filter "Nombre del test"
+
   Lanzar la suite de test que he creado (Unitarios o E2E) (Faltaria por añadir para mas consistencia los de integracion que se lanzarian sobre los repositorios con sus correspondientes comprobaciones)
+
           vendor/bin/phpunit --testsuite E2E
+
   O todos en general con:
+
           vendor/bin/phpunit
 
 
