@@ -16,7 +16,7 @@ class LeadDomainFactory
             'id' => Uuid::random()->value(),
             'name' => $faker->name,
             'email' => $faker->unique()->safeEmail,
-            'phone' => $faker->phoneNumber,
+            'phone' => "666777888",
             'createdAt' => "01-01-2024 10:00:00",
             'updatedAt' => "01-01-2024 10:00:01"
         ];

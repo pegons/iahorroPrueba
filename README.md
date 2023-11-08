@@ -58,5 +58,11 @@ una vez se crea un Lead crear un evento de dominio de creacin de leads, que se e
 
 He incluido por ultimo una notacion swagger de open api para poder generar la docu directamente, ya que tenemos DTOs y podemos usarlos para definir las peticiones, y en el propio controlador las diferentes respuestas.
 
+Hay algunos detalles, que depende quien implemente puede tomar un camino u otro. Hay una parte del código donde en lugar de usar un repositorio directamente para por ejemplo obtener el score, intento darle utilidad al dominio de
+Lead, para que sea el mismo quien tiene la potesta de generarse su Score. Entonces dejamos Dominios menos anémicos (Solo getter y setters y constructores). Por lo que al pasarle el repositorio (Realmente la interfaz), el puede encargarse de generarse su propio score por ejemplo.
+
+También hablando de dominio, he creado varios Value Objects basicos como Phone o Email, en lugar de usar string directamente, ya que pueden ser utiles por ejemplo para autovalidarse, o añadir funcionalidad a futuro sobre ese objeto un poco mas compacto que un atributo primitivo.
+
+
 
 
