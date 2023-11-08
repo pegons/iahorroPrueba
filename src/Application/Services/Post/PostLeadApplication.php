@@ -33,9 +33,9 @@ class PostLeadApplication implements PostLeadInterface
     /**
      * Create a new Lead.
      *
-     * @param string  $leadId
+     * @param PostLeadDto  $dto
      *
-     * @return GetLeadDto
+     * @return void
      */
     public function __invoke(PostLeadDto $dto): void
     {

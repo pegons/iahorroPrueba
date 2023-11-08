@@ -17,7 +17,6 @@ class GetLeadServiceControllerTest extends TestCase
         $faker = \Faker\Factory::create();
         parent::setUp();
 
-        // Create a lead before each test
         $this->lead = Lead::create([
             'name' => $faker->name,
             'email' => $faker->unique()->safeEmail,

@@ -41,7 +41,7 @@ class DeleteLeadApplicationTest extends TestCase
 
         $deleteApplication->__invoke($uuid);
 
-        $this->assertTrue(true); // Just to show the test passed, assertion is not necessary here
+        $this->assertTrue(true);
     }
 
     /** @test */
